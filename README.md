@@ -49,7 +49,7 @@ cp .env.example .env
 ```ini
 # Server
 SERVER__HOST=0.0.0.0
-SERVER__PORT=8000
+SERVER__PORT=8087
 
 # Database
 ORDER_DATABASE__HOST=localhost
@@ -95,14 +95,14 @@ Hourly order forecasts (next 24 hours)
 
 **Example:**
 ```bash
-curl http://localhost:8000/api/admin/analytics/summary
+curl http://localhost:8087/api/admin/analytics/summary
 ```
 
 ## 🔍 Testing
 
 ```bash
 # Health check
-curl http://localhost:8000/health
+curl http://localhost:8087/health
 
 # View logs
 docker-compose logs -f analytics-service

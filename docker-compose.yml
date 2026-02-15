@@ -5,7 +5,7 @@ services:
     build: .
     container_name: analytics-service
     ports:
-      - "8000:8000"
+      - "8087:8087"
     env_file:
       - .env
     environment:
@@ -14,7 +14,7 @@ services:
     networks:
       - analytics-network
     healthcheck:
-      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8087/health')"]
       interval: 30s
       timeout: 10s
       retries: 3

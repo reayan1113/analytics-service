@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 # Define nested config models
 class ServerConfig(BaseModel):
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = 8087
 
 class DatabaseConfig(BaseModel):
     host: str = "localhost"
